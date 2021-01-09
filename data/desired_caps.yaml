@@ -1,0 +1,18 @@
+platformName: Android
+# 模拟器
+platformVersion: 6.0.1
+deviceName: 127.0.0.1:7555
+
+noReset: True
+# unicodeKeyboard: True
+# resetKeyboard: True
+# dontStopAppOnReset: True
+# settings[waitForIdleTimeout]: 0
+newCommandTimeout: 300
+
+appPackage: com.xueqiu.android
+appActivity: .view.WelcomeActivityAlias
+ip: 127.0.0.1
+port: 4723
+
+
