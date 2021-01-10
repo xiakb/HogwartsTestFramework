@@ -1,7 +1,7 @@
-from page.base_page import BasePage
+from page.pre_page import PrePage
 
 
-class QuotesPage(BasePage):
+class QuotesPage(PrePage):
     """
     行情页
     """

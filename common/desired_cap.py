@@ -1,25 +1,13 @@
-import yaml
+from common.common_fun import *
 from appium import webdriver
-
-
-def get_data(filepath):
-    """
-    读取指定的文件信息
-    :param filepath: 需要读取的文件路径
-    :return: 返回读取的文件
-    """
-    with open(filepath, 'rb') as file:
-        data = file.read()
-        result = yaml.safe_load(data)
-    return result
 
 
 def desired_cap():
     """
-    启动对应APP
-    :return: driver
+    启动对应APP \n
+    :return: common
     """
-    data = get_data("../data/desired_caps.yaml")
+    data = get_yaml_data("../data/desired_caps.yaml")
     # 启动app参数
     desired_caps = {
         'platformName': data['platformName'],

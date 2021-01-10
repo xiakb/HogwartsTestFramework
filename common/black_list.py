@@ -11,7 +11,7 @@ class BlackList:
     @classmethod
     def black_list(cls):
         """
-        黑名单列表
+        黑名单列表 \n
         :return: 黑名单列表
         """
         black_lists = [cls._advertising_popup, cls._login_popup]

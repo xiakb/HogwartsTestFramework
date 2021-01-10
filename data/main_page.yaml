@@ -1,0 +1,7 @@
+quotes_page:
+  - find: //*[@resource-id='com.xueqiu.android:id/post_status']
+    action: find_and_click
+    locate_mode: mobile_by_xpath
+  - find: //*[@resource-id='android:id/tabs']//*[@text='行情']
+    action: find_and_click
+    locate_mode: mobile_by_xpath

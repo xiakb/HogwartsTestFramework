@@ -1,21 +1,22 @@
 from appium.webdriver.common.mobileby import MobileBy
-from page.base_page import BasePage
+from page.pre_page import PrePage
 from page.quotes_page import QuotesPage
 
 
-class MainPage(BasePage):
+class MainPage(PrePage):
     """
     需求首页
     """
-    _quotes = (MobileBy.XPATH, "//*[@resource-id='android:id/tabs']//*[@text='行情']")
-    _pen = (MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/post_status']")
+    # _quotes = (MobileBy.XPATH, "//*[@resource-id='android:id/tabs']//*[@text='行情']")
+    # _pen = (MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/post_status']")
 
     def goto_quotes_page(self):
         """
-        跳转到行情页
+        跳转到行情页 \n
         :return: 行情页
         """
-        self.find(*self._pen).click()
-        self.find(*self._quotes).click()
-        return QuotesPage(self.driver)
+        # self.base_page.find(*self._pen).click()
+        # self.base_page.find(*self._quotes).click()
+        self.base_page.load("quotes_page", "../data/main_page.yaml")
+        return QuotesPage(self.base_page)
 

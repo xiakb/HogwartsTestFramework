@@ -1,13 +1,15 @@
-from driver.app_driver import AppDriver
+from page.base_page import BasePage
+from page.main_page import MainPage
 
 
 class TestSearch:
     def setup_class(self):
-        self.app = AppDriver()
+        base_page = BasePage()
+        self.app = MainPage(base_page)
 
     def teardown_class(self):
-        self.app.stop()
+        self.app.base_page.quit()
 
     def test_search(self):
-        self.app.start().goto_main_page().goto_quotes_page()
+        self.app.goto_quotes_page()
 
