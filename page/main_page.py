@@ -5,7 +5,7 @@ from page.quotes_page import QuotesPage
 
 class MainPage(PrePage):
     """
-    需求首页
+    雪球首页
     """
     # _quotes = (MobileBy.XPATH, "//*[@resource-id='android:id/tabs']//*[@text='行情']")
     # _pen = (MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/post_status']")
